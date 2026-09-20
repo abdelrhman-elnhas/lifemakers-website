@@ -77,6 +77,7 @@ export function CampaignCard({ campaign, isActive, isPast }: CampaignCardProps) 
               color: isActive ? "#fff" : undefined,
             }}
             variant={isActive ? "default" : "outline"}
+            onClick={() => window.location.href = `https://wa.me/+201550550961?text=${encodeURIComponent(`أريد التبرع لحملة: ${campaign.name}`)}`}
           >
             تبرع الآن
           </Button>

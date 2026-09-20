@@ -107,7 +107,8 @@ export default function ActiveCampaignSection() {
             </div>
 
             <div className="flex flex-col sm:flex-row items-center gap-4 pt-6">
-              <Button size="lg" className="w-full sm:w-auto bg-primary text-white hover:bg-primary/90 text-lg px-10 py-6 rounded-lg font-bold shadow-xl shadow-primary/20 transition-transform hover:-translate-y-1">
+              <Button size="lg" onClick={() => window.location.href = `https://wa.me/+201550550961?text=${encodeURIComponent(`أريد التبرع لحملة: ${campaign.name}`)}`}
+                className="w-full sm:w-auto bg-primary text-white hover:bg-primary/90 text-lg px-10 py-6 rounded-lg font-bold shadow-xl shadow-primary/20 transition-transform hover:-translate-y-1">
                 تبرع الآن
               </Button>
               <Button asChild variant="outline" size="lg" className="w-full sm:w-auto border-slate-200 text-gray-700 hover:bg-slate-50 text-lg px-10 py-6 rounded-lg transition-colors">
