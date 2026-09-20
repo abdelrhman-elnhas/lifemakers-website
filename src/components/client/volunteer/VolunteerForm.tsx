@@ -217,7 +217,7 @@ const VolunteerForm = () => {
                                 <label htmlFor="job" className="text-sm font-bold text-slate-700">الوظيفة الحالية <span className="text-slate-400 font-normal">(إن وجد)</span></label>
                                 <div className="relative">
                                     <LuBriefcase className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 w-5 h-5" />
-                                    <input type="text" id="job" placeholder="المسمى الوظيفي ومكان العمل" className="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 pr-12 pl-4 text-sm focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent transition-all" />
+                                    <input {...register("job")} type="text" id="job" placeholder="المسمى الوظيفي ومكان العمل" className="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 pr-12 pl-4 text-sm focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent transition-all" />
                                 </div>
                             </div>
                         </div>

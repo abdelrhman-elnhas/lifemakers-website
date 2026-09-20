@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 export const volunteerSchema = z.object({
-    id: z.string(),
+    id: z.string().optional(),
     name: z.string().min(5, "الاسم ثلاثي يجب أن يقول 10 حروف على الأقل"),
     national_id: z.string().regex(/^\d{14}$/, "الرقم القومي يجب أن يكون 14 رقم"),
     age: z.coerce
