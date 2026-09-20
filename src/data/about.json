@@ -1,0 +1,45 @@
+{
+  "_numbers_reference": "٠ ١ ٢ ٣ ٤ ٥ ٦ ٧ ٨ ٩",
+  "stats": [
+    {
+      "id": 1,
+      "name": "متطوع",
+      "value": "+١٠٠",
+      "icon": "LuUsers",
+      "color": "text-[#2f8fd6]",
+      "bg": "bg-[#2f8fd6]/10 border border-[#2f8fd6]/20"
+    },
+    {
+      "id": 2,
+      "name": "أسرة مستفيدة",
+      "value": "+٧٢٥",
+      "icon": "FaHandHoldingHeart",
+      "color": "text-[#f1ad4a]",
+      "bg": "bg-[#f1ad4a]/10 border border-[#f1ad4a]/20"
+    },
+    {
+      "id": 3,
+      "name": "مشروع تنموي",
+      "value": "+٢٧",
+      "icon": "LuBuilding2",
+      "color": "text-[#2f8fd6]",
+      "bg": "bg-[#2f8fd6]/10 border border-[#2f8fd6]/20"
+    },
+    {
+      "id": 4,
+      "name": "عام من العطاء",
+      "value": "+١٤",
+      "icon": "FaCalendarDays",
+      "color": "text-[#f1ad4a]",
+      "bg": "bg-[#f1ad4a]/10 border border-[#f1ad4a]/20"
+    }
+  ],
+  "vision": {
+    "title": "رؤيتنا",
+    "description": "أن نكون رواد العمل التنموي والتطوعي، والمساهمة في بناء مجتمع متكافل ومزدهر يحظى فيه الجميع بفرص متساوية لحياة كريمة."
+  },
+  "mission": {
+    "title": "رسالتنا",
+    "description": "تمكين الأفراد والأسر الأكثر احتياجاً من خلال توفير الدعم المادي والمعنوي والتعليمي، وتفعيل دور المتطوعين لبناء مجتمع متماسك وقوي قادر على مواجهة تحديات المستقبل."
+  }
+}

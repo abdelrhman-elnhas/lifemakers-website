@@ -1,0 +1,86 @@
+[
+  {
+    "id": "1",
+    "name": "م. زياد وليد",
+    "role": "رئيس مجلس الإدارة",
+    "image": "/images/1.jpeg",
+    "parent": null
+  },
+  {
+    "id": "2",
+    "name": "م. محمد المنسي",
+    "role": "نائب رئيس مجلس الإدارة",
+    "image": "/images/02.jpg",
+    "parent": "1"
+  },
+  {
+    "id": "3",
+    "name": "م. حسين الرفاعي",
+    "role": "أمين الصندوق",
+    "image": "/images/3.jpg",
+    "parent": "1"
+  },
+  {
+    "id": "4",
+    "name": "أ. آية ماهر",
+    "role": "مدير تنفيذي",
+    "image": "/images/04.png",
+    "parent": "2"
+  },
+  {
+    "id": "5",
+    "name": "م. عبدالرحمن النحاس",
+    "role": "منسق التسويق",
+    "image": "/images/5.jpg",
+    "parent": "3"
+  },
+  {
+    "id": "6",
+    "name": "م. حازم الفقي",
+    "role": "مسؤول هندسة البيانات",
+    "image": "/images/6.jpg",
+    "parent": "3"
+  },
+  {
+    "id": "7",
+    "name": "أ. سلمى صلاح",
+    "role": "منسق HR",
+    "image": "/images/7.jpg",
+    "parent": "3"
+  },
+  {
+    "id": "8",
+    "name": "د. شيماء راشد",
+    "role": "منسق IT",
+    "image": "/images/8.jpg",
+    "parent": "3"
+  },
+  {
+    "id": "`9`",
+    "name": "أ. شيماء عبدالسلام",
+    "role": "منسق أبحاث",
+    "image": "/images/9.jpg",
+    "parent": "3"
+  },
+  {
+    "id": "10",
+    "name": "م. أحمد زمزم",
+    "role": "مسؤول TEO",
+    "image": "/images/10.jpg",
+    "parent": "3"
+  },
+  {
+    "id": "11",
+    "name": "أ. بسنت مجدي",
+    "role": "منسق أثر",
+    "image": "/images/11.jpg",
+    "parent": "3"
+  },
+  {
+    "id": "12",
+    "name": "أ. ياسمين خونده",
+    "role": "مسؤول التسويق الداخلي",
+    "image": "/images/12.jpeg",
+    "parent": "3"
+  }
+]

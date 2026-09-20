@@ -1,0 +1,27 @@
+[
+  {
+    "label": "الرئيسية",
+    "href": "/",
+    "active": true
+  },
+  {
+    "label": "عن الجمعية",
+    "href": "/about"
+  },
+  {
+    "label": "إنجازاتنا",
+    "href": "/achievements"
+  },
+  {
+    "label": "الحملات",
+    "href": "/campaigns"
+  },
+  {
+    "label": "حالات حرجة",
+    "href": "/cases"
+  },
+  {
+    "label": "تواصل معنا",
+    "href": "/contact"
+  }
+]
