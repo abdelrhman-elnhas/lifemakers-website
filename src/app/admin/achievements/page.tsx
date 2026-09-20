@@ -200,7 +200,7 @@ export default function AchievementsAdminPage() {
                         {errors.imageFiles && <p className="text-red-500 text-xs">{errors.imageFiles.message}</p>}
                     </div>
                     <div className="pt-4 flex gap-3">
-                        <Button type="submit" className="flex-1 bg-secondary text-[#11395f] hover:bg-[#e09831] font-bold py-6 rounded-xl">
+                        <Button type="submit" disabled={isAdding || isSubmitting} className="flex-1 bg-secondary text-[#11395f] hover:bg-[#e09831] font-bold py-6 rounded-xl">
                             {isAdding || isSubmitting ? "جاري الحفظ..." : "حفظ الإنجاز"}                        </Button>
                         <Button
                             type="button"

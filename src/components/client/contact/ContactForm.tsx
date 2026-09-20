@@ -130,10 +130,6 @@ export default function ContactForm() {
                 : "border-white/20 focus:border-secondary"
                 }`}
             />
-
-            <div className="absolute top-1/2 -translate-y-1/2 left-3 text-white/60 pointer-events-none">
-              <LuChevronDown className="w-4 h-4" />
-            </div>
           </div>
           {errors.subject && (
             <p className="flex items-center gap-1 text-red-300 text-[11px] font-medium">
