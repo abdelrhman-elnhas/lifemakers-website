@@ -25,7 +25,7 @@ export default function Navbar() {
   return (
     <>
       {/* ── Top Info Bar ── */}
-      <div className="bg-[#11395f] text-white text-[11px] min-[380px]:text-xs sm:text-[13px] relative z-50 border-b border-white/10 w-full overflow-hidden min-[499px]:block hidden">
+      <div className="bg-[#11395f] text-white text-[11px] min-[380px]:text-xs sm:text-[13px] relative z-50 border-b border-white/10 w-full overflow-hidden min-[499px]:block hidden z-100">
         <div className="max-w-7xl mx-auto px-2 min-[340px]:px-3 sm:px-6 sm:h-10 flex items-center justify-between gap-1.5 sm:gap-4 flex-wrap">
           {/* Contacts */}
           <div className="flex items-center gap-2 min-[360px]:gap-3 sm:gap-6 flex-wrap text-[11px] min-[380px]:text-xs font-medium">
@@ -111,7 +111,7 @@ export default function Navbar() {
           paddingBottom: isScrolled ? "4px" : "8px",
         }}
         transition={{ duration: 0.25 }}
-        className="sticky top-0 inset-x-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-100"
+        className="sticky top-0 inset-x-0 z-100 bg-white/95 backdrop-blur-md border-b border-slate-100"
       >
         <div className="max-w-7xl mx-auto px-2 min-[340px]:px-4 sm:px-6 flex items-center justify-between gap-2 h- min-[360px]:h-14">
           {/* Logo */}
