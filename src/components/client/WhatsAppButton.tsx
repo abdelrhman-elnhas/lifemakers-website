@@ -7,13 +7,6 @@ import { useState, useEffect } from "react";
 
 export default function WhatsAppButton() {
   const [isHovered, setIsHovered] = useState(false);
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  if (!isMounted) return null;
 
   return (
     <div className="fixed bottom-6 left-8 sm:bottom-8 sm:left-24 z-50">
