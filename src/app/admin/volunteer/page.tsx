@@ -134,6 +134,14 @@ export default function VolunteersAdminPage() {
                                 <span className="text-sm text-slate-500 font-medium">المهنة</span>
                                 <p className="font-semibold text-slate-800">{selectedVolunteer?.job}</p>
                             </div>
+                            <div className="space-y-1">
+                                <span className="text-sm text-slate-500 font-medium">المهارا ت</span>
+                                <p className="font-semibold text-slate-800">{selectedVolunteer?.skills}</p>
+                            </div>
+                            <div className="space-y-1">
+                                <span className="text-sm text-slate-500 font-medium">الفريق الذي يفضل التطوع فيه</span>
+                                <p className="font-semibold text-slate-800">{selectedVolunteer?.preferable_team}</p>
+                            </div>
                         </div>
                     </div>
 

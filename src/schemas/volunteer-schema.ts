@@ -28,6 +28,8 @@ export const volunteerSchema = z.object({
     faculty: z.string().min(2, "الكلية مطلوبة"),
     year_of_study: z.string().min(1, "اختر السنة الدراسية"),
     job: z.string().optional(),
+    skills: z.string().optional(),
+    preferable_team: z.string().optional(),
 });
 
 export type VolunteerFormValues = z.infer<typeof volunteerSchema>;

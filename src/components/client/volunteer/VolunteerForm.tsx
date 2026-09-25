@@ -1,10 +1,12 @@
 "use client"
 
+import { useEffect } from "react";
 import { useSubmitVolunteer } from "@/hooks/useVolunteers";
 import { VolunteerFormValues, volunteerSchema } from "@/schemas/volunteer-schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { motion, type Variants } from "framer-motion";
 import { useForm } from "react-hook-form";
+import teamsData from "@/data/teams.json";
 import {
     LuUser,
     LuPhone,
@@ -18,7 +20,9 @@ import {
     LuCalendar,
     LuGraduationCap,
     LuBuilding,
-    LuSend
+    LuSend,
+    LuAward,
+    LuStar
 } from "react-icons/lu";
 
 
@@ -45,9 +49,19 @@ const itemVariants: Variants = {
 const VolunteerForm = () => {
 
 
-    const { register, reset, handleSubmit, formState: { errors, isSubmitting } } = useForm<VolunteerFormValues>({
+    const { register, reset, handleSubmit, setValue, formState: { errors, isSubmitting } } = useForm<VolunteerFormValues>({
         resolver: zodResolver(volunteerSchema),
     });
+
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            const params = new URLSearchParams(window.location.search);
+            const team = params.get("team");
+            if (team) {
+                setValue("preferable_team", team);
+            }
+        }
+    }, [setValue]);
 
     const { mutateAsync, isPending, isSuccess, isError, error } = useSubmitVolunteer();
 
@@ -218,6 +232,30 @@ const VolunteerForm = () => {
                                 <div className="relative">
                                     <LuBriefcase className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 w-5 h-5" />
                                     <input {...register("job")} type="text" id="job" placeholder="المسمى الوظيفي ومكان العمل" className="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 pr-12 pl-4 text-sm focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent transition-all" />
+                                </div>
+                            </div>
+
+                            <div className="space-y-2">
+                                <label htmlFor="job" className="text-sm font-bold text-slate-700">المهارات <span className="text-slate-400 font-normal">(إن وجد)</span></label>
+                                <div className="relative">
+                                    <LuAward className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 w-5 h-5" />
+                                    <input {...register("skills")} type="text" id="job" placeholder="مثال: التصميم - الكتابة - المونتاج" className="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 pr-12 pl-4 text-sm focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent transition-all" />
+                                </div>
+                            </div>
+
+                            <div className="space-y-2">
+                                <label htmlFor="preferable_team" className="text-sm font-bold text-slate-700">الفريق الذي تفضل التطوع فيه <span className="text-slate-400 font-normal">(إن وجد)</span></label>
+                                <div className="relative">
+                                    <LuStar className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 w-5 h-5" />
+                                    <select {...register("preferable_team")} id="preferable_team" className="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 pr-12 pl-4 text-sm focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent transition-all appearance-none cursor-pointer">
+                                        <option value="">اختر الفريق اذا كان لك تفضيل</option>
+                                        {teamsData.map((team) => (
+                                            <option key={team.id} value={team.name}>{team.name}</option>
+                                        ))}
+                                    </select>
+                                    <div className="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none">
+                                        <svg className="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+                                    </div>
                                 </div>
                             </div>
                         </div>
