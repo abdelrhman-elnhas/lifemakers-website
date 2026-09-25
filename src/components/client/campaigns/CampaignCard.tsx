@@ -38,7 +38,7 @@ export function CampaignCard({ campaign, isActive, isPast }: CampaignCardProps) 
         style={{ backgroundColor: campaign.color }}
       />
       <CardHeader>
-        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 px-4">
           <div>
             <div className="flex items-center gap-3 mb-2">
               <CardTitle className="text-[clamp(1.25rem,4vw,1.5rem)] font-bold text-gray-900">
@@ -84,7 +84,7 @@ export function CampaignCard({ campaign, isActive, isPast }: CampaignCardProps) 
         </div>
       </CardHeader>
 
-      <CardContent className="space-y-6">
+      <CardContent className="space-y-6 mx-3">
         <div className="bg-gray-50 p-4 rounded-lg border border-gray-100">
           <h4 className="font-semibold text-gray-900 flex items-center gap-2 mb-2">
             <FiTarget className="w-5 h-5 text-gray-500" />
@@ -117,7 +117,7 @@ export function CampaignCard({ campaign, isActive, isPast }: CampaignCardProps) 
           </div>
         )}
 
-        <Accordion type="single" collapsible className="w-full bg-white">
+        {/* <Accordion type="single" collapsible className="w-full bg-white">
           <AccordionItem value="rationale" className="border-b-0 border-t border-gray-100 pt-2">
             <AccordionTrigger className="text-gray-800 hover:text-gray-600 font-semibold text-lg hover:no-underline text-start leading-snug whitespace-normal gap-3">
               لماذا هذا التوقيت وهذا الهدف؟
@@ -132,7 +132,7 @@ export function CampaignCard({ campaign, isActive, isPast }: CampaignCardProps) 
               </div>
             </AccordionContent>
           </AccordionItem>
-        </Accordion>
+        </Accordion> */}
       </CardContent>
     </Card>
   );

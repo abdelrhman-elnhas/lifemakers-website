@@ -35,7 +35,7 @@ export default function BoardHierarchy() {
             viewport={{ once: true }}
             className="text-[clamp(2rem,6vw,3.75rem)] font-bold text-primary mb-6"
           >
-            مجلس الإدارة
+            الهيكل التنظيمي
           </motion.h2>
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}

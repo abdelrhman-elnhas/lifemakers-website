@@ -15,10 +15,10 @@
   },
   {
     "id": "3",
-    "name": "م. حسين الرفاعي",
+    "name": "أ. بسنت مجدي",
     "role": "أمين الصندوق",
-    "image": "/images/3.jpg",
-    "parent": "1"
+    "image": "/images/11.jpg",
+    "parent": "3"
   },
   {
     "id": "4",
@@ -36,48 +36,20 @@
   },
   {
     "id": "6",
-    "name": "م. حازم الفقي",
-    "role": "مسؤول هندسة البيانات",
-    "image": "/images/6.jpg",
-    "parent": "3"
-  },
-  {
-    "id": "7",
     "name": "أ. سلمى صلاح",
     "role": "منسق HR",
     "image": "/images/7.jpg",
     "parent": "3"
   },
   {
-    "id": "8",
-    "name": "د. شيماء راشد",
-    "role": "منسق IT",
-    "image": "/images/8.jpg",
-    "parent": "3"
-  },
-  {
-    "id": "`9`",
-    "name": "أ. شيماء عبدالسلام",
-    "role": "منسق أبحاث",
-    "image": "/images/9.jpg",
-    "parent": "3"
-  },
-  {
-    "id": "10",
+    "id": "7",
     "name": "م. أحمد زمزم",
     "role": "مسؤول TEO",
     "image": "/images/10.jpg",
     "parent": "3"
   },
   {
-    "id": "11",
-    "name": "أ. بسنت مجدي",
-    "role": "منسق أثر",
-    "image": "/images/11.jpg",
-    "parent": "3"
-  },
-  {
-    "id": "12",
+    "id": "8",
     "name": "أ. ياسمين خونده",
     "role": "مسؤول التسويق الداخلي",
     "image": "/images/12.jpeg",
