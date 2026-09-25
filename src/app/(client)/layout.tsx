@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/client/Navbar";
 import Footer from "@/components/client/Footer";
+import WhatsAppButton from "@/components/client/WhatsAppButton";
 import Script from "next/script";
 
 
@@ -104,6 +105,7 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
       <Navbar />
       <main className="flex-1">{children}</main>
       <Footer />
+      <WhatsAppButton />
 
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}

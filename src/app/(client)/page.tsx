@@ -5,7 +5,7 @@ import AchievementsSection from "@/components/client/achievements/AchievementsSe
 import CasesSection from "@/components/client/cases/CasesSection";
 import VolunteerBanner from "@/components/client/VolunteerBanner";
 import ContactSection from "@/components/client/ContactSection";
-
+import AtharSection from "@/components/client/AtharSection";
 export default function Page() {
 
   return (
@@ -16,6 +16,7 @@ export default function Page() {
       <ActiveCampaignSection />
       <VolunteerBanner />
       <AchievementsSection layoutType="section" />
+      <AtharSection />
       <ContactSection />
     </>
   );
