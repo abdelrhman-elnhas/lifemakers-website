@@ -16,7 +16,7 @@ export default function Footer() {
 
   return (
     <footer
-      className="relative bg-[#07192b] text-white overflow-hidden border-t border-primary-light/30"
+      className="relative bg-[#07192b] text-white border-t border-primary-light/30"
       aria-label="تذييل الصفحة"
     >
       <FooterTopHighlights />
@@ -28,7 +28,7 @@ export default function Footer() {
           whileHover={{ scale: 1.12, y: -3 }}
           whileTap={{ scale: 0.9 }}
           aria-label="العودة لأعلى الصفحة"
-          className="absolute -top-6 inset-inline-end-5 sm:inset-inline-end-10 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-linear-to-tr from-secondary to-[#e09831] text-primary flex items-center justify-center shadow-xl border-2 border-white/30 cursor-pointer z-20"
+          className="absolute -top-4 sm:-top-6 left-5 sm:left-10 w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-linear-to-tr from-secondary to-[#e09831] text-primary flex items-center justify-center shadow-xl border-2 border-white/30 cursor-pointer z-20"
         >
           <LuChevronUp className="w-6 h-6 stroke-3" />
         </motion.button>

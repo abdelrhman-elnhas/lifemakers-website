@@ -36,6 +36,23 @@ export default function CasesAdminPage() {
 
 
     // ###### Handlers ######
+
+    const handleAdd = () => {
+        setSelectedCase(null);
+        setExistingImages([]);
+        setRemovedImages([]);
+        reset({
+            title: "",
+            description: "",
+            images: [],
+            remaining: "" as unknown as number,
+            min_amount: "" as unknown as number,
+            type: "",
+        });
+        setIsAddModalOpen(true);
+    }
+
+
     const handleEdit = (item: CasesFormValues) => {
         setSelectedCase(item);
         setExistingImages(Array.isArray(item.images) ? item.images : []);
@@ -139,7 +156,7 @@ export default function CasesAdminPage() {
                     <p className="text-slate-500">أضف، عدل، أو احذف الحالات التي تظهر في الموقع.</p>
                 </div>
                 <Button
-                    onClick={() => setIsAddModalOpen(true)}
+                    onClick={() => handleAdd()}
                     className="px-4 py-5 bg-secondary text-[#11395f] hover:bg-[#e09831] font-bold gap-2 rounded-lg"
                 >
                     <LuPlus className="w-5 h-5" />
@@ -190,6 +207,24 @@ export default function CasesAdminPage() {
                             className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-secondary/20 focus:border-secondary outline-none transition-all"
                         />
                         {errors.type && <p className="text-red-500 text-xs">{errors.type.message}</p>}
+                    </div>
+                    <div>
+                        <label className="block text-sm font-bold text-primary mb-2">المتبقي</label>
+                        <input
+                            type="number"
+                            {...register("remaining")}
+                            className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-secondary/20 focus:border-secondary outline-none transition-all"
+                        />
+                        {errors.remaining && <p className="text-red-500 text-xs">{errors.remaining.message}</p>}
+                    </div>
+                    <div>
+                        <label className="block text-sm font-bold text-primary mb-2">سعر السهم</label>
+                        <input
+                            type="number"
+                            {...register("min_amount")}
+                            className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-secondary/20 focus:border-secondary outline-none transition-all"
+                        />
+                        {errors.min_amount && <p className="text-red-500 text-xs">{errors.min_amount.message}</p>}
                     </div>
                     <div>
                         <label className="block text-sm font-bold text-primary mb-2">الصور</label>
@@ -252,6 +287,24 @@ export default function CasesAdminPage() {
                             className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-secondary/20 focus:border-secondary outline-none transition-all"
                         />
                         {errors.type && <p className="text-red-500 text-xs">{errors.type.message}</p>}
+                    </div>
+                    <div>
+                        <label className="block text-sm font-bold text-primary mb-2">المتبقي</label>
+                        <input
+                            type="number"
+                            {...register("remaining")}
+                            className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-secondary/20 focus:border-secondary outline-none transition-all"
+                        />
+                        {errors.remaining && <p className="text-red-500 text-xs">{errors.remaining.message}</p>}
+                    </div>
+                    <div>
+                        <label className="block text-sm font-bold text-primary mb-2">سعر السهم</label>
+                        <input
+                            type="number"
+                            {...register("min_amount")}
+                            className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-secondary/20 focus:border-secondary outline-none transition-all"
+                        />
+                        {errors.min_amount && <p className="text-red-500 text-xs">{errors.min_amount.message}</p>}
                     </div>
                     <div>
                         <label className="block text-sm font-bold text-primary mb-2">الصور</label>

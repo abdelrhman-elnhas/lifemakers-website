@@ -13,12 +13,12 @@ interface CasesGridProps {
 const CaseCard = ({ item }: { item: CasesFormValues }) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
-    // Only show the toggle button if the description is long enough to be clamped
-    const showToggle = item.description && item.description.length > 100;
-
     return (
         <>
-            <div className="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col group h-full">
+            <div 
+                className="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col group h-full cursor-pointer"
+                onClick={() => setIsModalOpen(true)}
+            >
                 <div className="relative h-56 w-full shrink-0 overflow-hidden">
                     <Image
                         src={item.images?.[0] || "/logo.png"}
@@ -45,14 +45,6 @@ const CaseCard = ({ item }: { item: CasesFormValues }) => {
                         <p className="text-slate-600 text-sm leading-relaxed line-clamp-3">
                             {item.description}
                         </p>
-                        {showToggle && (
-                            <button
-                                onClick={() => setIsModalOpen(true)}
-                                className="text-primary hover:text-secondary text-xs font-bold self-start mt-2 transition-colors focus:outline-none min-h-11 inline-flex items-center"
-                            >
-                                قراءة المزيد
-                            </button>
-                        )}
                     </div>
 
                     {item.remaining && item.min_amount && (
@@ -73,6 +65,7 @@ const CaseCard = ({ item }: { item: CasesFormValues }) => {
                         href={`https://wa.me/+201550550961?text=${encodeURIComponent(`أريد التبرع لحالة: ${item.title}`)}`}
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
                         className="w-full flex items-center justify-center gap-2 bg-primary hover:bg-primary-hover text-white py-3.5 px-4 rounded-xl font-bold transition-all duration-200 hover:-translate-y-0.5 shadow-md hover:shadow-lg shadow-primary/30 shrink-0"
                     >
                         <span>تبرع الان</span>

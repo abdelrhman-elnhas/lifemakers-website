@@ -22,10 +22,10 @@ export function CampaignTimeline({
       </h2>
       <div className="relative">
         {/* Horizontal Line for Desktop */}
-        <div className="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-gray-200 -translate-y-1/2 rounded-full" />
-        
+        {/* <div className="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-gray-200 -translate-y-1/2 rounded-full" /> */}
+
         {/* Vertical Line for Mobile */}
-        <div className="block md:hidden absolute top-0 inset-inline-start-[27px] w-1 h-full bg-gray-200 rounded-full" />
+        {/* <div className="block md:hidden absolute top-0 inset-inline-start-[27px] w-1 h-full bg-gray-200 rounded-full" /> */}
 
         <div className="flex flex-col md:flex-row justify-between relative z-10 gap-8 md:gap-4">
           {campaigns.map((campaign) => {
