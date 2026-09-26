@@ -15,7 +15,7 @@ const CaseCard = ({ item }: { item: CasesFormValues }) => {
 
     return (
         <>
-            <div 
+            <div
                 className="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col group h-full cursor-pointer"
                 onClick={() => setIsModalOpen(true)}
             >
@@ -75,7 +75,7 @@ const CaseCard = ({ item }: { item: CasesFormValues }) => {
 
             {/* Modal for full details */}
             {isModalOpen && (
-                <div className="fixed inset-0 z-100 flex items-center justify-center p-4 sm:p-6">
+                <div className="fixed inset-0 z-9999 flex items-center justify-center p-4 sm:p-6">
                     <div
                         className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm"
                         onClick={() => setIsModalOpen(false)}

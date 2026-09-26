@@ -16,15 +16,39 @@ interface AchievementModalProps {
 
 export default function AchievementModal({ achievement, onClose }: AchievementModalProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [touchStartX, setTouchStartX] = useState<number | null>(null);
+  const [touchEndX, setTouchEndX] = useState<number | null>(null);
 
-  const nextImage = (e: React.MouseEvent) => {
-    e.stopPropagation();
+  const nextImage = (e?: React.MouseEvent) => {
+    if (e) e.stopPropagation();
     setCurrentImageIndex((prev) => (prev === achievement.images.length - 1 ? 0 : prev + 1));
   };
 
-  const prevImage = (e: React.MouseEvent) => {
-    e.stopPropagation();
+  const prevImage = (e?: React.MouseEvent) => {
+    if (e) e.stopPropagation();
     setCurrentImageIndex((prev) => (prev === 0 ? achievement.images.length - 1 : prev - 1));
+  };
+
+  const minSwipeDistance = 50;
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    setTouchEndX(null);
+    setTouchStartX(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    setTouchEndX(e.targetTouches[0].clientX);
+  };
+
+  const onTouchEnd = () => {
+    if (touchStartX === null || touchEndX === null) return;
+    const distance = touchStartX - touchEndX;
+
+    if (distance > minSwipeDistance) {
+      nextImage();
+    } else if (distance < -minSwipeDistance) {
+      prevImage();
+    }
   };
 
 
@@ -59,7 +83,12 @@ export default function AchievementModal({ achievement, onClose }: AchievementMo
           </button>
 
           {/* Carousel Section */}
-          <div className="relative w-full md:w-1/2 h-64 sm:h-80 md:h-125 bg-slate-100 shrink-0 group">
+          <div
+            className="relative w-full md:w-1/2 h-64 sm:h-80 md:h-125 bg-slate-100 shrink-0 group"
+            onTouchStart={onTouchStart}
+            onTouchMove={onTouchMove}
+            onTouchEnd={onTouchEnd}
+          >
             <AnimatePresence initial={false} mode="wait">
               <motion.div
                 key={currentImageIndex}
