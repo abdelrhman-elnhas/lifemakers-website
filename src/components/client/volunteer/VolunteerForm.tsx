@@ -82,7 +82,7 @@ const VolunteerForm = () => {
                 className="text-center mb-10 sm:mb-16"
             >
 
-                <motion.h1 variants={itemVariants} className="text-3xl sm:text-4xl md:text-5xl font-black text-primary mb-4 leading-tight">
+                <motion.h1 variants={itemVariants} className="text-3xl sm:text-4xl md:text-5xl font-black text-primary mb-4 leading-relaxed">
                     سجّل للتطوع في <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-[#2a5f90]">صناع الحياة</span>
                 </motion.h1>
                 <motion.p variants={itemVariants} className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
