@@ -83,7 +83,7 @@ const VolunteerForm = () => {
             >
 
                 <motion.h1 variants={itemVariants} className="text-3xl sm:text-4xl md:text-5xl font-black text-primary mb-4 leading-10">
-                    سجّل للتطوع في <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-[#2a5f90]">صناع الحياة</span>
+                    سجّل للتطوع في <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-[#2a5f90] py-4">صناع الحياة</span>
                 </motion.h1>
                 <motion.p variants={itemVariants} className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
                     عندنا مكان لأي مهارة عندك، سواء كانت تسويق، تصوير، تصميم، تنظيم، أو حتى لو حابب تشاركنا وقتك وجهدك. املأ البيانات التالية وهنتواصل معاك.
