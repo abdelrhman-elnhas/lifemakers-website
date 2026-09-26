@@ -34,7 +34,7 @@ export default function WhatsAppButton() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="تواصل معنا عبر واتساب"
-          className="relative flex items-center justify-center w-10 h-10 sm:w-14 sm:h-14 bg-linear-to-tr from-[#128C7E] to-[#25D366] text-white rounded-full shadow-xl hover:shadow-[0_10px_30px_rgba(37,211,102,0.4)] transition-all duration-300 hover:scale-110 group"
+          className="relative flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 bg-linear-to-tr from-[#128C7E] to-[#25D366] text-white rounded-full shadow-xl hover:shadow-[0_10px_30px_rgba(37,211,102,0.4)] transition-all duration-300 hover:scale-110 group"
         >
           {/* Constant subtle pulse */}
           <span className="absolute inset-0 rounded-full border-2 border-[#25D366] animate-[ping_2s_cubic-bezier(0,0,0.2,1)_infinite] opacity-60"></span>
