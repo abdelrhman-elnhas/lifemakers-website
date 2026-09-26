@@ -15,7 +15,7 @@ export default function VolunteerPage() {
 
 
   return (
-    <div className="min-h-screen bg-slate-50 pt-28 pb-20 sm:pt-36 sm:pb-28 w-full overflow-hidden" aria-label="صفحة التطوع">
+    <div className="min-h-screen bg-slate-50 pt-28 pb-20 sm:pt-36 sm:pb-28 w-full overflow-x-hidden" aria-label="صفحة التطوع">
       {/* Decorative Orbs */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/15 rounded-full blur-3xl pointer-events-none -mr-32 -mt-32" />
       <div className="absolute top-40 left-0 w-120 h-120 bg-primary/5 rounded-full blur-3xl pointer-events-none -ml-40" />
