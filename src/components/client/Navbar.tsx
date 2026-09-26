@@ -113,7 +113,7 @@ export default function Navbar() {
         transition={{ duration: 0.25 }}
         className="sticky top-0 inset-x-0 z-100 bg-white/95 backdrop-blur-md border-b border-slate-100"
       >
-        <div className="max-w-7xl mx-auto px-2 min-[340px]:px-4 sm:px-6 flex items-center justify-between gap-2 h- min-[360px]:h-14">
+        <div className="max-w-7xl mx-auto px-2 min-[340px]:px-4 sm:px-6 flex items-center justify-between gap-2 h-12 min-[360px]:h-14">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 shrink-0 group">
             <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
