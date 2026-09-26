@@ -43,7 +43,7 @@ export default function HeroSection() {
   return (
     <section
       ref={heroRef}
-      className="relative min-h-[calc(100dvh-7rem)] flex flex-col justify-center overflow-hidden bg-[#0b223a] w-full"
+      className="relative min-h-screen sm:min-h-[calc(100dvh-7rem)] flex flex-col justify-center overflow-hidden bg-[#0b223a] w-full"
       aria-label="القسم الرئيسي"
     >
       {/* ── Background Image with Motion Parallax & Multi-layer Overlay ── */}
