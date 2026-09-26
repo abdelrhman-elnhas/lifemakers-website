@@ -48,7 +48,7 @@ export default function ActiveCampaignSection() {
       {/* Subtle background decoration */}
       <div className="absolute top-0 left-0 w-1/3 h-full bg-slate-50/50 skew-x-12 origin-top-left -z-10 hidden lg:block"></div>
 
-      <div className="container mx-auto px-4 max-w-7xl relative z-10">
+      <div className="container mx-auto px-4 max-w-7xl relative z-1">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

@@ -5,6 +5,7 @@ import { CasesFormValues } from '@/schemas/cases.schema';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import { createPortal } from 'react-dom';
 
 interface CasesGridProps {
     limit?: number;
@@ -74,7 +75,7 @@ const CaseCard = ({ item }: { item: CasesFormValues }) => {
             </div>
 
             {/* Modal for full details */}
-            {isModalOpen && (
+            {isModalOpen && typeof document !== 'undefined' && createPortal(
                 <div className="fixed inset-0 z-9999 flex items-center justify-center p-4 sm:p-6">
                     <div
                         className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm"
@@ -139,7 +140,8 @@ const CaseCard = ({ item }: { item: CasesFormValues }) => {
                             </Link>
                         </div>
                     </div>
-                </div>
+                </div>,
+                document.body
             )}
         </>
     );
