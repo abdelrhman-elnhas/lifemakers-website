@@ -43,14 +43,14 @@ export default function HeroSection() {
   return (
     <section
       ref={heroRef}
-      className="relative min-h-[calc(100dvh-3rem)] sm:min-h-[calc(100dvh-7rem)] flex flex-col justify-center overflow-hidden bg-[#0b223a] w-full"
+      className="relative min-h-dvh sm:min-h-[calc(100dvh-6.5rem)] flex flex-col justify-center overflow-hidden bg-[#0b223a] w-full"
       aria-label="القسم الرئيسي"
     >
       {/* ── Background Image with Motion Parallax & Multi-layer Overlay ── */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
           style={{ y: imgY, scale: imgScale }}
-          className="relative w-full h-[115%] top-[-7%]"
+          className="relative w-full h-screen top-[-7%]"
         >
           <Image
             src="/hero-img2.png"
@@ -98,7 +98,7 @@ export default function HeroSection() {
       </div>
 
       {/* ── Hero Main Content Block ── */}
-      <div className="relative z-10 max-w-7xl w-full mx-auto px-3 min-[360px]:px-5 sm:px-10 lg:px-16 pt-8 min-[360px]:pt-12 sm:pt-16 pb-14 sm:pb-8 md:py-0">
+      <div className="relative z-10 max-w-7xl w-full mx-auto px-3 min-[360px]:px-5 sm:px-10 lg:px-16 pt-8 min-[360px]:pt-36 sm:pt-16 pb-14 sm:pb-8 md:py-0">
         <motion.div
           variants={containerVariants}
           initial="hidden"
