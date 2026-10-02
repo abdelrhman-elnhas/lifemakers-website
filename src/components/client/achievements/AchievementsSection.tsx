@@ -5,8 +5,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { LuArrowLeft } from "react-icons/lu";
 import AchievementsGrid from "./AchievementsGrid";
-import AchievementsGridSkeleton from "./AchievementsGridSkeleton";
-import { useAchievements } from "@/hooks/useAchievements";
+
 
 
 
@@ -35,7 +34,8 @@ export default function AchievementsSection({ layoutType }: { layoutType: "page"
               transition={{ delay: 0.1 }}
               className="text-lg text-slate-600 leading-relaxed font-medium"
             >
-              كل سقف بنعمّره، وكل بيت بنوصّله المياه، إنجاز بنفتخر بيه. شوف جزء من اللي حققناه.
+              كل خطوة ليست مجرد دعم يصل لمحتاج..
+              كل خطوة يمكن أن تغير قصة حياة أسرة كاملة.
             </motion.p>
           </div>
 

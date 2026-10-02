@@ -117,15 +117,16 @@ export default function HeroSection() {
             variants={itemVariants}
             className="text-[clamp(1.5rem,7vw,3.5rem)] font-black text-white leading-[1.3] min-[360px]:leading-tight mb-4 sm:mb-5 tracking-tight"
           >
-            <span className="text-white">صُنّاع الحياة… لأن كل بيت يستحق حياة كريمة</span>
+            <span className="text-white">صُنّاع الحياة... لأن كل بيت يستحق حياة كريمة</span>
           </motion.h1>
 
           {/* Subtext */}
           <motion.p
             variants={itemVariants}
-            className="text-slate-200 text-[clamp(0.875rem,3vw,1.125rem)] leading-relaxed mb-6 sm:mb-8 max-w-xl font-normal"
-          >جمعية خيرية في المحلة الكبرى، نعمل على توفير الدعم اللي محتاجه أهل بلدنا، بجهد فريق من المتطوعين وشراكة أهل الخير.
-          </motion.p>
+            className="text-slate-200 text-[clamp(0.875rem,3vw,1.125rem)] leading-relaxed mb-6 sm:mb-8 max-w-xl font-normal">
+            جمعية خيرية في المحلة الكبرى، تعمل بجهد تطوعي على دعم الأسر
+            الأكثر احتياجًا انطلاقًا من إيماننا بتقديم دعم مستدام يساعد الأسر على
+            حياة أكثر استقرارًا واستقلالًا.          </motion.p>
 
           {/* Call-to-action Buttons */}
           <motion.div

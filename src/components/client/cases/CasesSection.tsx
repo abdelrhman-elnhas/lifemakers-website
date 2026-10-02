@@ -30,7 +30,7 @@ export default function CasesSection() {
               transition={{ delay: 0.1 }}
               className="text-lg text-slate-600 leading-relaxed font-medium"
             >
-              حالات إنسانية تحتاج لتدخل سريع، كن سبباً في تفريج كربتهم.
+              حالات إنسانية لا تحتمل الانتظار.. كن سببًا في سد احتياجها
             </motion.p>
           </div>
 

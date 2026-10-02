@@ -30,7 +30,7 @@ export default function VolunteerBanner() {
           transition={{ delay: 0.1 }}
           className="text-[clamp(1.875rem,6vw,3.75rem)] font-bold text-white mb-6 leading-tight tracking-tight"
         >
-          عايز تكون <span className="text-secondary">صانع حياة؟</span>
+          كن <span className="text-secondary">صانع حياة؟</span>
         </motion.h2>
 
         <motion.p
@@ -40,8 +40,13 @@ export default function VolunteerBanner() {
           transition={{ delay: 0.2 }}
           className="text-[clamp(1rem,3vw,1.5rem)] text-slate-300 mb-10 max-w-3xl leading-relaxed font-medium px-2"
         >
-          انضم لفريقنا، عندنا مكان لأي مهارة عندك — تسويق، تصوير، تصميم، تنظيم، أو حتى وقتك وجهدك.
-        </motion.p>
+          <span className="font-bold text-3xl text-secondary block">
+            اصنع حياة لنفسك وللآخرين.
+
+          </span>
+          في صُنّاع الحياة، تتيح للشباب والمراهقين فرصًا للتعلم والتجربة، ومساحة
+          آمنة لتحمل المسؤولية وتطوير المهارات وبناء الذات من خلال العمل
+          التطوعي.        </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -52,8 +57,7 @@ export default function VolunteerBanner() {
         >
           <Button asChild className="w-full min-[400px]:w-auto rounded-lg px-6 py-6 sm:px-10 sm:py-8 bg-secondary text-primary hover:bg-secondary-hover transition-all font-bold text-base sm:text-xl group shadow-xl shadow-secondary/20 hover:shadow-2xl hover:shadow-secondary/30">
             <Link href="/volunteer" className="flex items-center justify-center gap-3">
-              قدم للتطوع معانا
-              <LuArrowLeft className="w-5 h-5 sm:w-7 sm:h-7 group-hover:-translate-x-1.5 transition-transform" />
+              قدم الآن للتطوع              <LuArrowLeft className="w-5 h-5 sm:w-7 sm:h-7 group-hover:-translate-x-1.5 transition-transform" />
             </Link>
           </Button>
         </motion.div>

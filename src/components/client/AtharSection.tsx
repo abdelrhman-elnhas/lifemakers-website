@@ -55,6 +55,7 @@ export default function AtharSection() {
 
               <p className="text-sm sm:text-base md:text-lg lg:text-xl text-slate-300 leading-relaxed mb-10 sm:mb-12 font-medium max-w-2xl mx-auto lg:mx-0">
                 {atharData.intro}
+                <span className="font-bold text-secondary"> وجودك أثر.</span>
               </p>
 
               {/* Impact Note */}

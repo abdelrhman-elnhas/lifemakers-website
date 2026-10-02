@@ -62,14 +62,18 @@ export default function AboutSection() {
             </motion.div>
 
             <motion.h2 variants={itemVariants} className="text-3xl min-[400px]:text-4xl md:text-5xl font-bold text-primary mb-6 leading-tight">
-              نصنع الحياة <br />
+              نصنع الحياة..<br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-[#2a5f90]">
                 ونبني مستقبل الإنسان
               </span>
             </motion.h2>
 
             <motion.p variants={itemVariants} className="text-base sm:text-lg text-gray-600 mb-8 leading-relaxed">
-              جمعية صناع الحياة الخيرية جمعية أهلية مقرها المحلة الكبرى، بتشتغل من خلال عدد من الإدارات والفرق على مساعدة الأسر الأكثر احتياجًا، من خلال مشاريع مستدامة ومبادرات موسمية على مدار السنة.            </motion.p>
+              صُنّاع الحياة جمعية خيرية أهلية مقرها المحلة الكبرى، قائمة على
+              الجهد التطوعي الكامل من خلال عدد من الإدارات والفرق الداخلية،
+              وتهدف إلى دعم الأسر المستحقة من خلال مشروعات خيرية وتنموية
+              مستدامة، و مساعدات موسمية على مدار العام.
+            </motion.p>
 
             {pathname !== '/about' && (
               <motion.div variants={itemVariants}>
@@ -77,7 +81,7 @@ export default function AboutSection() {
                   href='/about'
                   className="inline-flex px-6 sm:px-8 py-3.5 sm:py-4 bg-secondary text-primary rounded-xl font-bold hover:bg-[#e09e36] transition-all duration-300 shadow-lg shadow-[#f1ad4a]/20 hover:shadow-xl hover:shadow-[#f1ad4a]/30 active:scale-95 items-center gap-2 text-sm sm:text-base"
                 >
-                  اعرف اكتر عننا
+                  تعرف علينا أكثر
                 </Link>
               </motion.div>
             )}

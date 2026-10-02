@@ -25,11 +25,12 @@ export default function ContactInfo() {
         </div> */}
 
         <h2 className="text-[clamp(1.5rem,5vw,2.25rem)] font-black leading-tight text-white mb-4">
-          عايز <span className="text-secondary">تتواصل معانا؟</span>
+          <span className="text-secondary">تواصل معنا</span>
         </h2>
 
         <p className="text-slate-300 text-[clamp(0.75rem,2vw,1rem)] leading-relaxed mb-6 font-normal">
-          لا تتردد في التواصل معنا، وسيقوم فريق صناع الحياة بالرد عليك في أسرع وقت للإجابة على جميع استفساراتك أو تنسيق مساهمتك وتطوعك.
+          يسعدنا استقبال استفساراتكم ورسائلكم, وسيتواصل
+          معكم فريق صناع الحياة في أقرب وقت.
         </p>
       </div>
 
