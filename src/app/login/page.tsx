@@ -1,8 +1,9 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { LuMail, LuLock, LuArrowLeft } from "react-icons/lu";
+import { LuMail, LuLock, LuArrowLeft, LuCircleAlert } from "react-icons/lu";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/client";
@@ -11,9 +12,27 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { LoginFormValues, loginSchema } from "@/schemas/login.schema";
 
-export default function AdminLoginPage() {
+function getErrorMessage(error: { message?: string; status?: number }): string {
+    const msg = error.message?.toLowerCase() ?? "";
+    if (msg.includes("invalid login credentials") || msg.includes("invalid_credentials")) {
+        return "البريد الإلكتروني أو كلمة المرور غير صحيحة";
+    }
+    if (msg.includes("email not confirmed")) {
+        return "لم يتم تأكيد البريد الإلكتروني بعد";
+    }
+    if (msg.includes("too many requests") || msg.includes("rate limit")) {
+        return "محاولات كثيرة جدًا، حاول مرة أخرى لاحقًا";
+    }
+    if (msg.includes("network") || msg.includes("fetch")) {
+        return "خطأ في الاتصال، تحقق من اتصالك بالإنترنت";
+    }
+    return "حدث خطأ أثناء تسجيل الدخول، حاول مرة أخرى";
+}
 
-    const { register, reset, handleSubmit, formState: { errors, isSubmitting } } = useForm<LoginFormValues>({
+export default function AdminLoginPage() {
+    const [loginError, setLoginError] = useState<string | null>(null);
+
+    const { register, reset, handleSubmit, formState: { isSubmitting } } = useForm<LoginFormValues>({
         resolver: zodResolver(loginSchema),
     });
 
@@ -21,19 +40,21 @@ export default function AdminLoginPage() {
     const supabase = createClient();
 
     const handleLogin = async (data: LoginFormValues) => {
+        setLoginError(null);
         try {
             const { error } = await supabase.auth.signInWithPassword({
                 email: data.email,
                 password: data.password
             });
             if (error) {
+                setLoginError(getErrorMessage(error));
                 return;
             }
             reset();
-            router.push("/admin");
+            router.replace("/admin");
             router.refresh();
         } catch (error) {
-            console.log(error);
+            setLoginError(getErrorMessage(error as { message?: string }));
         }
     };
 
@@ -72,6 +93,24 @@ export default function AdminLoginPage() {
                     <h1 className="text-2xl font-bold text-primary mb-2">لوحة التحكم</h1>
                     <p className="text-sm text-slate-500 text-center">قم بتسجيل الدخول للوصول إلى لوحة الإدارة</p>
                 </div>
+
+                {/* Error Banner */}
+                <AnimatePresence>
+                    {loginError && (
+                        <motion.div
+                            initial={{ opacity: 0, y: -8, height: 0 }}
+                            animate={{ opacity: 1, y: 0, height: "auto" }}
+                            exit={{ opacity: 0, y: -8, height: 0 }}
+                            transition={{ duration: 0.25, ease: "easeOut" }}
+                            className="mb-2 overflow-hidden"
+                        >
+                            <div className="flex items-center gap-3 bg-red-50 border border-red-200 text-red-700 rounded-xl px-4 py-3 text-sm font-bold">
+                                <LuCircleAlert className="w-5 h-5 shrink-0 text-red-500" />
+                                <span>{loginError}</span>
+                            </div>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
 
                 <form onSubmit={handleSubmit(handleLogin)} className="space-y-5" >
                     <div>
