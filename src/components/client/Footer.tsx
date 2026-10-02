@@ -6,7 +6,6 @@ import { LuChevronUp } from "react-icons/lu";
 import FooterTopHighlights from "./footer/FooterTopHighlights";
 import FooterAbout from "./footer/FooterAbout";
 import FooterLinks from "./footer/FooterLinks";
-import FooterGallery from "./footer/FooterGallery";
 import FooterBottomBar from "./footer/FooterBottomBar";
 
 export default function Footer() {

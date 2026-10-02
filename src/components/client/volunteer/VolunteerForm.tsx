@@ -107,7 +107,7 @@ const VolunteerForm = () => {
                         </h3>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <div className="space-y-2">
-                                <label htmlFor="name" className="text-sm font-bold text-slate-700">الاسم الرباعي <span className="text-red-500">*</span></label>
+                                <label htmlFor="name" className="text-sm font-bold text-slate-700">الاسم الثلاثي <span className="text-red-500">*</span></label>
                                 <div className="relative">
                                     <LuUser className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 w-5 h-5" />
                                     <input {...register("name")} type="text" id="name" placeholder="أدخل اسمك بالكامل" className="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 pr-12 pl-4 text-sm focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent transition-all" />
