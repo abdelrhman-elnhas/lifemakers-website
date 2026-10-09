@@ -1,11 +1,14 @@
 "use client";
 
 import { useCases } from '@/hooks/useCases';
+import { toArabicNumerals } from '@/lib/toArabicNumerals';
 import { CasesFormValues } from '@/schemas/cases.schema';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import { createPortal } from 'react-dom';
+
+
 
 interface CasesGridProps {
     limit?: number;
@@ -52,12 +55,12 @@ const CaseCard = ({ item }: { item: CasesFormValues }) => {
                         <div className="flex flex-col min-[320px]:flex-row justify-between items-center mb-6 bg-slate-50 p-3 min-[320px]:p-4 rounded-xl border border-slate-100 shrink-0 gap-3 min-[320px]:gap-0 w-full">
                             <div className="flex flex-col justify-center items-center w-full min-[320px]:w-auto">
                                 <span className="text-slate-500 text-xs min-[320px]:text-sm font-medium">المبلغ المتبقي</span>
-                                <span className="font-bold text-primary text-base min-[320px]:text-lg">{item.remaining} <span className="text-xs min-[320px]:text-sm font-normal text-slate-500">ج.م</span></span>
+                                <span className="font-bold text-primary text-base min-[320px]:text-lg">{toArabicNumerals(item.remaining)} <span className="text-xs min-[320px]:text-sm font-normal text-slate-500">ج.م</span></span>
                             </div>
                             <div className="w-full h-px min-[320px]:w-px min-[320px]:h-auto bg-slate-200 min-[320px]:self-stretch my-1"></div>
                             <div className="flex flex-col justify-center items-center w-full min-[320px]:w-auto">
                                 <span className="text-slate-500 text-xs min-[320px]:text-sm font-medium">سعر السهم</span>
-                                <span className="font-semibold text-slate-700 text-sm min-[320px]:text-base">{item.min_amount} <span className="text-[10px] min-[320px]:text-xs font-normal text-slate-500">ج.م</span></span>
+                                <span className="font-semibold text-slate-700 text-sm min-[320px]:text-base">{toArabicNumerals(item.min_amount)} <span className="text-[10px] min-[320px]:text-xs font-normal text-slate-500">ج.م</span></span>
                             </div>
                         </div>
                     )}
@@ -120,12 +123,12 @@ const CaseCard = ({ item }: { item: CasesFormValues }) => {
                                 <div className="flex flex-col min-[320px]:flex-row justify-between items-center bg-slate-50 p-4 min-[320px]:p-5 rounded-2xl border border-slate-100 shrink-0 gap-4 min-[320px]:gap-0 w-full">
                                     <div className="flex flex-col justify-center items-center w-full min-[320px]:w-auto">
                                         <span className="text-slate-500 text-xs min-[320px]:text-sm font-medium mb-1">المبلغ المتبقي</span>
-                                        <span className="font-bold text-primary text-lg min-[320px]:text-xl sm:text-2xl">{item.remaining} <span className="text-xs min-[320px]:text-sm font-normal text-slate-500">ج.م</span></span>
+                                        <span className="font-bold text-primary text-lg min-[320px]:text-xl sm:text-2xl">{toArabicNumerals(item.remaining)} <span className="text-xs min-[320px]:text-sm font-normal text-slate-500">ج.م</span></span>
                                     </div>
                                     <div className="w-full h-px min-[320px]:w-px min-[320px]:h-auto bg-slate-200 min-[320px]:self-stretch my-1"></div>
                                     <div className="flex flex-col justify-center items-center w-full min-[320px]:w-auto">
                                         <span className="text-slate-500 text-xs min-[320px]:text-sm font-medium mb-1">سعر السهم</span>
-                                        <span className="font-semibold text-slate-700 text-base min-[320px]:text-lg sm:text-xl">{item.min_amount} <span className="text-xs min-[320px]:text-sm font-normal text-slate-500">ج.م</span></span>
+                                        <span className="font-semibold text-slate-700 text-base min-[320px]:text-lg sm:text-xl">{toArabicNumerals(item.min_amount)} <span className="text-xs min-[320px]:text-sm font-normal text-slate-500">ج.م</span></span>
                                     </div>
                                 </div>
                             )}
