@@ -41,7 +41,7 @@ export default function AboutSection() {
   return (
     <section className="relative py-16 md:py-24 bg-slate-100 overflow-hidden w-full" aria-label="عن المؤسسة">
       {/* Decorative ambient orbs */}
-      <div className="absolute top-0 right-0 w-80 h-80 bg-[#f1ad4a]/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-0 right-0 w-80 h-80 bg-secondary/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#2f8fd6]/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
@@ -63,7 +63,7 @@ export default function AboutSection() {
 
             <motion.h2 variants={itemVariants} className="text-3xl min-[400px]:text-4xl md:text-5xl font-bold text-primary mb-6 leading-tight">
               نصنع الحياة..<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-[#2a5f90]">
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-[#2a5f90] py-4">
                 ونبني مستقبل الإنسان
               </span>
             </motion.h2>
@@ -79,7 +79,7 @@ export default function AboutSection() {
               <motion.div variants={itemVariants}>
                 <Link
                   href='/about'
-                  className="inline-flex px-6 sm:px-8 py-3.5 sm:py-4 bg-secondary text-primary rounded-xl font-bold hover:bg-[#e09e36] transition-all duration-300 shadow-lg shadow-[#f1ad4a]/20 hover:shadow-xl hover:shadow-[#f1ad4a]/30 active:scale-95 items-center gap-2 text-sm sm:text-base"
+                  className="inline-flex px-6 sm:px-8 py-3.5 sm:py-4 bg-secondary text-primary rounded-xl font-bold hover:bg-[#e09e36] transition-all duration-300 shadow-lg shadow-secondary/20 hover:shadow-xl hover:shadow-secondary/30 active:scale-95 items-center gap-2 text-sm sm:text-base"
                 >
                   تعرف علينا أكثر
                 </Link>
@@ -101,7 +101,7 @@ export default function AboutSection() {
                 <motion.div
                   key={stat.id}
                   variants={itemVariants}
-                  className="relative p-5 sm:p-6 rounded-2xl sm:rounded-3xl border border-white/10 bg-gradient-to-br from-primary via-[#0d2f4d] to-[#0a2138] shadow-2xl hover:shadow-[#2f8fd6]/20 hover:-translate-y-1.5 transition-all duration-300 group overflow-hidden"
+                  className="relative p-5 sm:p-6 rounded-2xl sm:rounded-3xl border border-white/10 bg-linear-to-br from-primary via-primary to-[#0a2138] shadow-2xl hover:shadow-[#2f8fd6]/20 hover:-translate-y-1.5 transition-all duration-300 group overflow-hidden"
                 >
                   <div className="absolute top-0 right-0 w-24 h-24 sm:w-32 sm:h-32 bg-white/5 rounded-full -mr-12 -mt-12 sm:-mr-16 sm:-mt-16 transition-transform duration-500 group-hover:scale-150 pointer-events-none" />
 

@@ -74,7 +74,8 @@ export default function TeamsSection() {
             transition={{ delay: 0.1 }}
             className="text-lg text-slate-600 max-w-2xl mx-auto"
           >
-            نعمل كفريق واحد من خلال إدارات متخصصة لضمان تقديم أفضل الخدمات وتحقيق أهداف المؤسسة بكفاءة وفعالية.
+            نعمل كفريق واحد من خلال إدارات متخصصة، لكل إدارة
+            مسؤولية واضحة.
           </motion.p>
         </div>
 

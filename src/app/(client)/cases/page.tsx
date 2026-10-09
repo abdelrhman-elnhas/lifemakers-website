@@ -14,8 +14,8 @@ export default function CasesPage() {
     return (
         <main className="min-h-screen bg-slate-50 pb-24">
             <PageHero
-                title="الحالات العاجلة"
-                description="ساهم معنا في رفع المعاناة عن الأسر الأكثر احتياجاً. تبرعك يصنع فرقاً حقيقياً في حياتهم."
+                title="حالات لا تحتمل الانتظار"
+                description="ساهم معنا في رفع المعاناة عن الأسر المستحقة، وساعدهم على تجاوز احتياجاتهم والوصول إلى حياة أكثر أمانا واستقرارا"
                 imageSrc="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=2000"
             />
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 relative z-40">

@@ -86,7 +86,8 @@ const VolunteerForm = () => {
                     سجّل للتطوع في <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-[#2a5f90] py-4">صناع الحياة</span>
                 </motion.h1>
                 <motion.p variants={itemVariants} className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
-                    عندنا مكان لأي مهارة عندك، سواء كانت تسويق، تصوير، تصميم، تنظيم، أو حتى لو حابب تشاركنا وقتك وجهدك. املأ البيانات التالية وهنتواصل معاك.
+                    في صناع الحياة، تطوعك تجربة شاملة للتعلم، واكتشاف قدراتك، وتطوير مهاراتك، وصناعة أثر حقيقي مع الآخرين.
+                    نوفر لك فرصة لاكتشاف شغفك وتجربة مجالات مختلفة
                 </motion.p>
             </motion.div>
 

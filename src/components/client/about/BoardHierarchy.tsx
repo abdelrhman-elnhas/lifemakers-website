@@ -33,10 +33,17 @@ export default function BoardHierarchy() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-[clamp(2rem,6vw,3.75rem)] font-bold text-primary mb-6"
+            className="text-[clamp(2rem,6vw,3.75rem)] font-bold text-primary"
           >
             الهيكل التنظيمي
           </motion.h2>
+          <motion.h4
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-lg font-medium text-slate-500 mb-6">
+            يقـــــوم عمــــــــل الجمعيـــــــــــة بالكامــــــــل علـــــــــى المتطوعيــــــــــن.
+          </motion.h4>
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}

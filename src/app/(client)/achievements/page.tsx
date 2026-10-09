@@ -3,9 +3,8 @@ import AchievementsGrid from "@/components/client/achievements/AchievementsGrid"
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "إنجازاتنا",
-  description:
-    "إنجازات جمعية صناع الحياة الخيرية، من دعم الأسر، تطوير البيوت، وتوفير المياه النظيفة للمحتاجين في المحلة الكبرى.",
+  title: "قصة حياة",
+  description: "خلف كل إنجاز، حكاية أسرة، وفريق تطوعي آمن بأن التغيير يبدأ بخطوة",
   alternates: { canonical: "/achievements" },
 };
 
@@ -15,8 +14,8 @@ export default function AchievementsPage() {
   return (
     <main className="min-h-screen bg-slate-50 overflow-hidden" dir="rtl">
       <PageHero
-        title="إنجازاتنا"
-        description="كل سقف بنعمّره، وكل بيت بنوصّله المياه، وكل ابتسامة بنرسمها هي إنجاز حقيقي بنفتخر بيه في جمعية صناع الحياة."
+        title="قصة حياة"
+        description="خلف كل إنجاز، حكاية أسرة، وفريق تطوعي آمن بأن التغيير يبدأ بخطوة"
         imageSrc="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=2000&auto=format&fit=crop"
       />
 

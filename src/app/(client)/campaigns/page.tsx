@@ -44,7 +44,8 @@ export default function CampaignsPage() {
     <main className="min-h-screen bg-slate-50 pb-24" dir="rtl">
       <PageHero
         title="حملاتنا الخيرية"
-        description="نعمل على مدار العام بخطة واضحة ومدروسة لتلبية احتياجات الأسر الأشد احتياجًا في الوقت المناسب."
+        description="نطلق حملات ومبادرات متنوعة على مدار العام لدعم الأسر الأكثر احتياجا، والاستجابة لاحتياجاتهم بما
+يصنع أثرا حقيقيا ويسهم في استقرارهم"
         imageSrc="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&q=80&w=2000"
       />
 
