@@ -28,6 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       dir="rtl"
       className={cn("h-full antialiased", tajawal.variable)}
     >
+      <meta name="google-site-verification" content="7Ry-K0VbOxxn8Td6xa4yn70-xMXKwcw-xXHEbHmfuws" />
       <body className="min-h-full flex flex-col">
         <Providers>{children}</Providers>
       </body>
