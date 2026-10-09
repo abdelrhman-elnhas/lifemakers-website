@@ -130,7 +130,7 @@ export default function TeamsSection() {
             className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm"
             onClick={() => setIsModalOpen(false)}
           ></div>
-          <div className="relative bg-white rounded-3xl shadow-2xl w-full max-w-lg overflow-hidden flex flex-col animate-in fade-in zoom-in-95 duration-200">
+          <div className="relative bg-white rounded-3xl shadow-2xl w-full max-w-lg max-h-[90vh] overflow-hidden flex flex-col animate-in fade-in zoom-in-95 duration-200">
             {/* Modal Header */}
             <div className={`relative p-6 sm:p-8 flex items-start sm:items-center justify-between ${selectedTeam.bg.replace('/10', '/30')}`}>
               <div className="flex items-center gap-4">
@@ -161,7 +161,7 @@ export default function TeamsSection() {
             </div>
 
             {/* Modal Body */}
-            <div className="p-6 sm:p-8 bg-white flex flex-col gap-6">
+            <div className="p-6 sm:p-8 bg-white flex flex-col gap-6 overflow-y-auto">
               <div>
                 <h4 className="text-lg font-bold text-slate-900 mb-3">مهام الفريق</h4>
                 <p className="text-slate-600 leading-relaxed text-base whitespace-pre-wrap">
