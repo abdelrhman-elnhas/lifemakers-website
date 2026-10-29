@@ -29,7 +29,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-2 min-[340px]:px-3 sm:px-6 sm:h-10 flex items-center justify-between gap-1.5 sm:gap-4 flex-wrap">
           {/* Contacts */}
           <div className="flex items-center gap-2 min-[360px]:gap-3 sm:gap-6 flex-wrap text-[11px] min-[380px]:text-xs font-medium">
-            <a
+            <Link
               href="mailto:info@lifemakers-mahalla.org"
               className="flex items-center justify-center gap-1.5 text-white/90 hover:text-secondary transition-colors shrink-0 min-w-11 px-1"
               title="البريد الإلكتروني"
@@ -37,8 +37,8 @@ export default function Navbar() {
             >
               <LuMail className="w-4 h-4 text-secondary shrink-0" />
               <span className="hidden min-[340px]:inline">info@lifemakers-mahalla.org</span>
-            </a>
-            <a
+            </Link>
+            <Link
               href="tel:+201550550961"
               className="flex items-center justify-center gap-1.5 text-white/90 hover:text-secondary transition-colors shrink-0 min-w-11 px-1"
               title="اتصل بنا: 01550550961"
@@ -48,11 +48,16 @@ export default function Navbar() {
               <span dir="ltr" className="font-sans text-[11px] min-[380px]:text-xs">
                 +20 155 055 0961
               </span>
-            </a>
-            <span className="hidden lg:flex items-center gap-1.5 text-white/80 font-medium">
+            </Link>
+            <Link
+              href="https://maps.app.goo.gl/Muogr2uBjvymCBkV6"
+              className="flex items-center justify-center gap-1.5 text-white/90 hover:text-secondary transition-colors shrink-0 min-w-11 px-1"
+              title="العنوان"
+              aria-label="العنوان"
+            >
               <LuMapPin className="w-4 h-4 text-secondary" />
               <span>2 ش. محمد الفاتح متفرع من ش. علي الشيشيني - المحلة الكبرى</span>
-            </span>
+            </Link>
           </div>
 
           {/* Social Icons */}
