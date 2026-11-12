@@ -121,7 +121,7 @@ export default function ActiveCampaignSection() {
           <div className="hidden lg:flex lg:w-5/12 justify-center relative">
             <div className="relative aspect-square w-full max-w-md rounded-[2.5rem] overflow-hidden shadow-2xl ring-1 ring-black/5">
               <Image
-                src="/campaign2.jpg"
+                src="/campaign33.png"
                 alt="حملة خيرية"
                 fill
                 className="object-cover"

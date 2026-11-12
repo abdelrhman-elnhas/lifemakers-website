@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import AchievementModal from "./AchievementModal";
@@ -15,8 +15,20 @@ interface AchievementsGridProps {
 
 export default function AchievementsGrid({ achievements: propAchievements, layoutType = "page" }: AchievementsGridProps) {
     const { data: fetchedAchievements = [], isLoading } = useAchievements();
-    const achievements = propAchievements || fetchedAchievements;
-    const displayAchievements = layoutType === "section" ? achievements.slice(0, 3) : achievements;
+
+    const sortedAchievements = useMemo(() => {
+        const list = propAchievements || fetchedAchievements;
+        return [...list].sort((a, b) => {
+            const timeA = new Date(a.date).getTime();
+            const timeB = new Date(b.date).getTime();
+            if (isNaN(timeA) || isNaN(timeB)) {
+                return (b.date || "").localeCompare(a.date || "");
+            }
+            return timeB - timeA;
+        });
+    }, [propAchievements, fetchedAchievements]);
+
+    const displayAchievements = layoutType === "section" ? sortedAchievements.slice(0, 3) : sortedAchievements;
 
     const [selectedAchievement, setSelectedAchievement] = useState<AchievementData | null>(null);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
