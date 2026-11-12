@@ -16,6 +16,8 @@ interface CasesGridProps {
 
 const CaseCard = ({ item }: { item: CasesFormValues }) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const hasRemaining = Boolean(item.remaining && Number(item.remaining) > 0);
+    const hasMinAmount = Boolean(item.min_amount && Number(item.min_amount) > 0);
 
     return (
         <>
@@ -51,17 +53,35 @@ const CaseCard = ({ item }: { item: CasesFormValues }) => {
                         </p>
                     </div>
 
-                    {item.remaining && item.min_amount && (
-                        <div className="flex flex-col min-[320px]:flex-row justify-between items-center mb-6 bg-slate-50 p-3 min-[320px]:p-4 rounded-xl border border-slate-100 shrink-0 gap-3 min-[320px]:gap-0 w-full">
-                            <div className="flex flex-col justify-center items-center w-full min-[320px]:w-auto">
-                                <span className="text-slate-500 text-xs min-[320px]:text-sm font-medium">المبلغ المتبقي</span>
-                                <span className="font-bold text-primary text-base min-[320px]:text-lg">{toArabicNumerals(item.remaining)} <span className="text-xs min-[320px]:text-sm font-normal text-slate-500">ج.م</span></span>
+                    {hasRemaining ? (
+                        hasMinAmount ? (
+                            <div className="flex flex-col min-[320px]:flex-row justify-between items-center mb-6 bg-slate-50 p-3 min-[320px]:p-4 rounded-xl border border-slate-100 shrink-0 gap-3 min-[320px]:gap-0 w-full">
+                                <div className="flex flex-col justify-center items-center w-full min-[320px]:w-auto">
+                                    <span className="text-slate-500 text-xs min-[320px]:text-sm font-medium">المبلغ المتبقي</span>
+                                    <span className="font-bold text-primary text-base min-[320px]:text-lg">{toArabicNumerals(item.remaining)} <span className="text-xs min-[320px]:text-sm font-normal text-slate-500">ج.م</span></span>
+                                </div>
+                                <div className="w-full h-px min-[320px]:w-px min-[320px]:h-auto bg-slate-200 min-[320px]:self-stretch my-1"></div>
+                                <div className="flex flex-col justify-center items-center w-full min-[320px]:w-auto">
+                                    <span className="text-slate-500 text-xs min-[320px]:text-sm font-medium">سعر السهم</span>
+                                    <span className="font-semibold text-slate-700 text-sm min-[320px]:text-base">{toArabicNumerals(item.min_amount)} <span className="text-[10px] min-[320px]:text-xs font-normal text-slate-500">ج.م</span></span>
+                                </div>
                             </div>
-                            <div className="w-full h-px min-[320px]:w-px min-[320px]:h-auto bg-slate-200 min-[320px]:self-stretch my-1"></div>
-                            <div className="flex flex-col justify-center items-center w-full min-[320px]:w-auto">
-                                <span className="text-slate-500 text-xs min-[320px]:text-sm font-medium">سعر السهم</span>
-                                <span className="font-semibold text-slate-700 text-sm min-[320px]:text-base">{toArabicNumerals(item.min_amount)} <span className="text-[10px] min-[320px]:text-xs font-normal text-slate-500">ج.م</span></span>
+                        ) : (
+                            <div className="flex justify-center items-center mb-6 bg-slate-50 p-3 min-[320px]:p-4 rounded-xl border border-slate-100 shrink-0 w-full">
+                                <div className="flex flex-col justify-center items-center w-full">
+                                    <span className="text-slate-500 text-xs min-[320px]:text-sm font-medium">المبلغ المتبقي</span>
+                                    <span className="font-bold text-primary text-base min-[320px]:text-lg">{toArabicNumerals(item.remaining)} <span className="text-xs min-[320px]:text-sm font-normal text-slate-500">ج.م</span></span>
+                                </div>
                             </div>
+                        )
+                    ) : (
+                        <div className="flex items-center justify-center mb-6 bg-emerald-50 text-emerald-800 p-3 min-[320px]:p-4 rounded-xl border border-emerald-100 shrink-0 w-full text-center">
+                            <span className="font-bold text-xs min-[320px]:text-sm text-emerald-700 flex items-center justify-center gap-1.5">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-emerald-600 shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                                </svg>
+                                تم اتمام الحالة بفضل الله ثم تبرعاتكم
+                            </span>
                         </div>
                     )}
 
@@ -119,17 +139,35 @@ const CaseCard = ({ item }: { item: CasesFormValues }) => {
                                 </p>
                             </div>
 
-                            {item.remaining && item.min_amount && (
-                                <div className="flex flex-col min-[320px]:flex-row justify-between items-center bg-slate-50 p-4 min-[320px]:p-5 rounded-2xl border border-slate-100 shrink-0 gap-4 min-[320px]:gap-0 w-full">
-                                    <div className="flex flex-col justify-center items-center w-full min-[320px]:w-auto">
-                                        <span className="text-slate-500 text-xs min-[320px]:text-sm font-medium mb-1">المبلغ المتبقي</span>
-                                        <span className="font-bold text-primary text-lg min-[320px]:text-xl sm:text-2xl">{toArabicNumerals(item.remaining)} <span className="text-xs min-[320px]:text-sm font-normal text-slate-500">ج.م</span></span>
+                            {hasRemaining ? (
+                                hasMinAmount ? (
+                                    <div className="flex flex-col min-[320px]:flex-row justify-between items-center bg-slate-50 p-4 min-[320px]:p-5 rounded-2xl border border-slate-100 shrink-0 gap-4 min-[320px]:gap-0 w-full">
+                                        <div className="flex flex-col justify-center items-center w-full min-[320px]:w-auto">
+                                            <span className="text-slate-500 text-xs min-[320px]:text-sm font-medium mb-1">المبلغ المتبقي</span>
+                                            <span className="font-bold text-primary text-lg min-[320px]:text-xl sm:text-2xl">{toArabicNumerals(item.remaining)} <span className="text-xs min-[320px]:text-sm font-normal text-slate-500">ج.م</span></span>
+                                        </div>
+                                        <div className="w-full h-px min-[320px]:w-px min-[320px]:h-auto bg-slate-200 min-[320px]:self-stretch my-1"></div>
+                                        <div className="flex flex-col justify-center items-center w-full min-[320px]:w-auto">
+                                            <span className="text-slate-500 text-xs min-[320px]:text-sm font-medium mb-1">سعر السهم</span>
+                                            <span className="font-semibold text-slate-700 text-base min-[320px]:text-lg sm:text-xl">{toArabicNumerals(item.min_amount)} <span className="text-xs min-[320px]:text-sm font-normal text-slate-500">ج.م</span></span>
+                                        </div>
                                     </div>
-                                    <div className="w-full h-px min-[320px]:w-px min-[320px]:h-auto bg-slate-200 min-[320px]:self-stretch my-1"></div>
-                                    <div className="flex flex-col justify-center items-center w-full min-[320px]:w-auto">
-                                        <span className="text-slate-500 text-xs min-[320px]:text-sm font-medium mb-1">سعر السهم</span>
-                                        <span className="font-semibold text-slate-700 text-base min-[320px]:text-lg sm:text-xl">{toArabicNumerals(item.min_amount)} <span className="text-xs min-[320px]:text-sm font-normal text-slate-500">ج.م</span></span>
+                                ) : (
+                                    <div className="flex justify-center items-center bg-slate-50 p-4 min-[320px]:p-5 rounded-2xl border border-slate-100 shrink-0 w-full">
+                                        <div className="flex flex-col justify-center items-center w-full">
+                                            <span className="text-slate-500 text-xs min-[320px]:text-sm font-medium mb-1">المبلغ المتبقي</span>
+                                            <span className="font-bold text-primary text-lg min-[320px]:text-xl sm:text-2xl">{toArabicNumerals(item.remaining)} <span className="text-xs min-[320px]:text-sm font-normal text-slate-500">ج.م</span></span>
+                                        </div>
                                     </div>
+                                )
+                            ) : (
+                                <div className="flex items-center justify-center bg-emerald-50 text-emerald-800 p-4 min-[320px]:p-5 rounded-2xl border border-emerald-100 shrink-0 w-full text-center">
+                                    <span className="font-bold text-sm min-[320px]:text-base sm:text-lg text-emerald-700 flex items-center justify-center gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-emerald-600 shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                                        </svg>
+                                        تم اتمام الحالة بفضل الله ثم تبرعاتكم
+                                    </span>
                                 </div>
                             )}
 
