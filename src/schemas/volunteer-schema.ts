@@ -5,7 +5,7 @@ export const volunteerSchema = z.object({
     name: z.string().min(5, "الاسم ثلاثي يجب أن يقول 10 حروف على الأقل"),
     national_id: z.string().regex(/^\d{14}$/, "الرقم القومي يجب أن يكون 14 رقم"),
     age: z.coerce
-        .number({ invalid_type_error: "السن مطلوب" })
+        .number({ error: "السن مطلوب" })
         .min(10, "السن غير صحيح")
         .max(99, "السن غير صحيح"),
     address: z.string().min(5, "العنوان مطلوب"),
@@ -32,5 +32,6 @@ export const volunteerSchema = z.object({
     preferable_team: z.string().optional(),
 });
 
-export type VolunteerFormValues = z.infer<typeof volunteerSchema>;
+export type VolunteerFormValues = z.output<typeof volunteerSchema>;
+export type VolunteerFormInput = z.input<typeof volunteerSchema>;
 

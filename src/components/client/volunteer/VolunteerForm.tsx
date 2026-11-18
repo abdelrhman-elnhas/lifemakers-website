@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import { useSubmitVolunteer } from "@/hooks/useVolunteers";
-import { VolunteerFormValues, volunteerSchema } from "@/schemas/volunteer-schema";
+import { VolunteerFormValues, VolunteerFormInput, volunteerSchema } from "@/schemas/volunteer-schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { motion, type Variants } from "framer-motion";
 import { useForm } from "react-hook-form";
@@ -49,7 +49,7 @@ const itemVariants: Variants = {
 const VolunteerForm = () => {
 
 
-    const { register, reset, handleSubmit, setValue, formState: { errors, isSubmitting } } = useForm<VolunteerFormValues>({
+    const { register, reset, handleSubmit, setValue, formState: { errors, isSubmitting } } = useForm<VolunteerFormInput, unknown, VolunteerFormValues>({
         resolver: zodResolver(volunteerSchema),
     });
 
