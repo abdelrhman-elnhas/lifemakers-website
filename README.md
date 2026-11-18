@@ -49,7 +49,7 @@ I designed and built that website end to end. The goal was simple: a site that f
 
 ### 🏠 Home
 
-![Home page](./screenshots/home.png)
+![Home page](public/screenshots/home.png)
 
 * Hero section that introduces the chapter and its mission in the first screen
 * Clear entry points to the rest of the site
@@ -60,7 +60,7 @@ I designed and built that website end to end. The goal was simple: a site that f
 
 ### 🏛️ About
 
-![About page](./screenshots/about.png)
+![About page](public/screenshots/about.png)
 
 * Tells the story of the chapter and the foundation behind it
 * Structured for scanning: short sections, strong hierarchy, readable Arabic typography
@@ -70,7 +70,7 @@ I designed and built that website end to end. The goal was simple: a site that f
 
 ### 🙋 Volunteering
 
-![Volunteering page](./screenshots/volunteering.png)
+![Volunteering page](public/screenshots/volunteering.png)
 
 * Explains how volunteering with the chapter works
 * Gives visitors a direct path to get involved
@@ -80,7 +80,7 @@ I designed and built that website end to end. The goal was simple: a site that f
 
 ### 🛡️ Admin Dashboard
 
-![Admin dashboard Login](./screenshots/admin-login.png)
+![Admin dashboard Login](public/screenshots/admin-login.png)
 
 * A protected admin area, separate from the public site, for the chapter team to manage the website without touching code
 * Sign-in handled by Supabase authentication, with sessions that work on both server and client
@@ -91,7 +91,7 @@ I designed and built that website end to end. The goal was simple: a site that f
 
 ### 🗂️ Content & Data Management
 
-![Admin content management](./screenshots/admin-content-1.png)(./screenshots/admin-content-2.png)
+![Admin content management](public/screenshots/admin-content-1.png)(public/screenshots/admin-content-2.png)
 
 * Tables and forms for creating, editing, and reviewing the data behind the site
 * Every form validated with React Hook Form and Zod, so bad input is caught before it reaches the database
