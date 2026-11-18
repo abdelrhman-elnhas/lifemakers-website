@@ -10,10 +10,11 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "حملاتنا الخيرية",
   description:
-    "حملاتنا الخيرية في المحلة الكبرى، نعمل على مدار العام بخطة واضحة ومدروسة لتلبية احتياجات الأسر الأشد احتياجًا في الوقت المناسب.",
-  alternates: { canonical: "/campaigns" },
+    "اكتشف الحملات والمبادرات الخيرية لجمعية صناع الحياة بالمحلة الكبرى، وشارك في دعم الأسر المستحقة من خلال حملات الإطعام والكساء وترميم المنازل والمساعدات الإنسانية.",
+  alternates: {
+    canonical: "/campaigns",
+  },
 };
-
 
 export default function CampaignsPage() {
   // 1. Filter out internal planning gaps

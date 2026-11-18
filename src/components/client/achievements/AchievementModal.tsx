@@ -58,7 +58,7 @@ export default function AchievementModal({ achievement, onClose }: AchievementMo
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="fixed inset-0 z-9999 flex items-center justify-center p-4 sm:p-6"
+        className="fixed inset-0 z-9999 flex items-center justify-center p-4 sm:p-6 overflow-y-auto"
         onClick={onClose}
       >
         {/* Backdrop */}
@@ -70,7 +70,7 @@ export default function AchievementModal({ achievement, onClose }: AchievementMo
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
           transition={{ type: "spring", damping: 25, stiffness: 300 }}
-          className="relative bg-white rounded-3xl overflow-hidden shadow-2xl w-full max-w-4xl flex flex-col md:flex-row z-10"
+          className="relative bg-white rounded-3xl shadow-2xl w-full max-w-4xl flex flex-col md:flex-row z-10 max-h-[90vh] my-[25px] overflow-y-auto md:overflow-hidden"
           onClick={(e) => e.stopPropagation()}
           dir="rtl"
         >
@@ -84,7 +84,7 @@ export default function AchievementModal({ achievement, onClose }: AchievementMo
 
           {/* Carousel Section */}
           <div
-            className="relative w-full md:w-1/2 h-64 sm:h-80 md:h-125 bg-slate-100 shrink-0 group"
+            className="relative w-full md:w-1/2 h-64 sm:h-80 md:h-auto md:min-h-125 bg-slate-100 shrink-0 group"
             onTouchStart={onTouchStart}
             onTouchMove={onTouchMove}
             onTouchEnd={onTouchEnd}
@@ -150,7 +150,7 @@ export default function AchievementModal({ achievement, onClose }: AchievementMo
           </div>
 
           {/* Content Section */}
-          <div className="p-8 sm:p-10 w-full md:w-1/2 flex flex-col justify-center bg-white relative">
+          <div className="p-8 sm:p-10 w-full md:w-1/2 flex flex-col justify-start bg-white relative overflow-y-auto">
             <div className="absolute top-0 right-10 w-16 h-1.5 bg-linear-to-l from-secondary to-[#e09831] -translate-y-1/2 rounded-full hidden md:block" />
 
             <div className="inline-flex items-center gap-2 bg-[#2f8fd6]/10 text-primary rounded-full px-4 py-1.5 text-sm font-bold mb-6 w-fit border border-[#2f8fd6]/20">
@@ -161,7 +161,7 @@ export default function AchievementModal({ achievement, onClose }: AchievementMo
               {achievement.title}
             </h2>
 
-            <p className="text-slate-600 text-lg leading-relaxed">
+            <p className="text-slate-600 text-lg leading-relaxed whitespace-pre-wrap">
               {achievement.description}
             </p>
           </div>

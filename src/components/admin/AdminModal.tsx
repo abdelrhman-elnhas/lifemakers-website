@@ -44,7 +44,7 @@ export default function AdminModal({
     const modalContent = (
         <AnimatePresence>
             {isOpen && (
-                <div className="fixed inset-0 z-100 flex items-center justify-center p-4" dir="rtl">
+                <div className="fixed inset-0 z-100 flex items-center justify-center p-4 overflow-y-auto" dir="rtl">
                     {/* Backdrop */}
                     <motion.div
                         initial={{ opacity: 0 }}
@@ -60,7 +60,7 @@ export default function AdminModal({
                         animate={{ opacity: 1, scale: 1, y: 0 }}
                         exit={{ opacity: 0, scale: 0.95, y: 20 }}
                         transition={{ type: "spring", duration: 0.5, bounce: 0.3 }}
-                        className={`relative w-full ${maxWidth} bg-white rounded-3xl shadow-2xl border border-slate-100 overflow-hidden flex flex-col max-h-[90vh]`}
+                        className={`relative w-full ${maxWidth} bg-white rounded-3xl shadow-2xl border border-slate-100 overflow-hidden flex flex-col max-h-[90vh] my-[25px]`}
                     >
                         {/* Header */}
                         <div className="flex items-center justify-between px-6 py-4 border-b border-slate-100 bg-slate-50/50 shrink-0">

@@ -125,14 +125,14 @@ export default function TeamsSection() {
 
       {/* Modal for full details */}
       {isModalOpen && selectedTeam && (
-        <div className="fixed inset-0 z-100 flex items-center justify-center p-4 sm:p-6">
+        <div className="fixed inset-0 z-100 flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
           <div
             className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm"
             onClick={() => setIsModalOpen(false)}
           ></div>
-          <div className="relative bg-white rounded-3xl shadow-2xl w-full max-w-lg max-h-[90vh] overflow-hidden flex flex-col animate-in fade-in zoom-in-95 duration-200">
+          <div className="relative bg-white rounded-3xl shadow-2xl w-full max-w-lg max-h-[90vh] overflow-hidden flex flex-col my-[25px] animate-in fade-in zoom-in-95 duration-200">
             {/* Modal Header */}
-            <div className={`relative p-6 sm:p-8 flex items-start sm:items-center justify-between ${selectedTeam.bg.replace('/10', '/30')}`}>
+            <div className={`relative p-6 sm:p-8 flex items-start sm:items-center justify-between shrink-0 ${selectedTeam.bg.replace('/10', '/30')}`}>
               <div className="flex items-center gap-4">
                 <div className={`w-14 h-14 sm:w-16 sm:h-16 shrink-0 rounded-2xl flex items-center justify-center bg-white shadow-sm ${selectedTeam.color}`}>
                   {(() => {

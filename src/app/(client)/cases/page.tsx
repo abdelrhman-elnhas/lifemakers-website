@@ -5,10 +5,11 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "الحالات العاجلة",
     description:
-        "الحالات العاجلة في جمعية صناع الحياة الخيرية، نعمل على مدار العام بخطة واضحة ومدروسة لتلبية احتياجات الأسر الأشد احتياجًا في الوقت المناسب.",
-    alternates: { canonical: "/cases" },
+        "تعرف على الحالات الإنسانية العاجلة التي تدعمها جمعية صناع الحياة بالمحلة الكبرى، وساهم في مساعدة الأسر الأكثر احتياجًا من خلال التبرع والمشاركة.",
+    alternates: {
+        canonical: "/cases",
+    },
 };
-
 
 export default function CasesPage() {
     return (

@@ -99,12 +99,12 @@ const CaseCard = ({ item }: { item: CasesFormValues }) => {
 
             {/* Modal for full details */}
             {isModalOpen && typeof document !== 'undefined' && createPortal(
-                <div className="fixed inset-0 z-9999 flex items-center justify-center p-4 sm:p-6">
+                <div className="fixed inset-0 z-9999 flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
                     <div
                         className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm"
                         onClick={() => setIsModalOpen(false)}
                     ></div>
-                    <div className="relative bg-white rounded-3xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto flex flex-col animate-in fade-in zoom-in-95 duration-200">
+                    <div className="relative bg-white rounded-3xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto flex flex-col my-[25px] animate-in fade-in zoom-in-95 duration-200">
                         {/* Modal Header with Image */}
                         <div className="relative h-64 sm:h-72 w-full shrink-0">
                             <Image
